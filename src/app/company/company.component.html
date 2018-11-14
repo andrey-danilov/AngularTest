@@ -1,0 +1,36 @@
+<div class="row ">
+
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col l4">
+        <i class="material-icons prefix">account_circle</i>
+        <input [(ngModel)]="companyname" name="something"  id="icon_Name" type="text" class="validate">
+        <label for="icon_Name">First Name</label>
+      </div>
+      <div class="input-field col l4">
+        <i class="material-icons prefix">email</i>
+        <input [(ngModel)]="quota" name="icon_Email" id="icon_Email" type="tel" class="validate">
+        <label for="icon_Email">Email</label>
+      </div>
+      <div class="input-field col l1">
+        <a class="waves-effect waves-light btn" (click)="AddItem()">button</a>
+      </div>
+    </div>
+  </form>
+
+  <div class="col s12">
+    <div class="col l3">Name</div>
+    <div class="col l3">Quota</div>
+  </div>
+
+  <ul class="collection with-header col-lg-12" *ngFor="let company of companies">
+    <li class="collection-item">
+      <div class="col s12">
+        <div class="col l3">{{ company.name}}</div>
+        <div class="col l3">{{ company.quota}}</div>
+        <div class="col l1 right-align"><a>Remove</a></div>
+        <div class="col l1 right-align"><a>Delete</a></div>
+      </div>
+    </li>
+  </ul>
+</div>

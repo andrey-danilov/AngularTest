@@ -1,0 +1,43 @@
+<div class="row ">
+
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col l4">
+        <i class="material-icons prefix">account_circle</i>
+        <input [(ngModel)]="username" name="something"  id="icon_Name" type="text" class="validate">
+        <label for="icon_Name">First Name</label>
+      </div>
+      <div class="input-field col l4">
+        <i class="material-icons prefix">email</i>
+        <input [(ngModel)]="email" name="icon_Email" id="icon_Email" type="tel" class="validate">
+        <label for="icon_Email">Email</label>
+      </div>
+      <div class="input-field col l3">
+
+        <input [(ngModel)]="company" name="icon_Company" id="icon_Company" type="tel" class="validate">
+        <label for="icon_Company">Company</label>
+      </div>
+      <div class="input-field col l1">
+        <a class="waves-effect waves-light btn" (click)="AddItem()">button</a>
+      </div>
+    </div>
+  </form>
+
+  <div class="col s12">
+    <div class="col l3">Name</div>
+    <div class="col l3">Email</div>
+    <div class="col l4">Company</div>
+  </div>
+
+<ul class="collection with-header col-lg-12" *ngFor="let user of users">
+  <li class="collection-item">
+    <div class="col s12">
+      <div class="col l3">{{ user.name}}</div>
+      <div class="col l3">{{ user.email}}</div>
+      <div class="col l4">{{ user.company}}</div>
+      <div class="col l1 right-align"><a>Remove</a></div>
+      <div class="col l1 right-align"><a>Delete</a></div>
+    </div>
+  </li>
+</ul>
+</div>
