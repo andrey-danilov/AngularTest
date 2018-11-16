@@ -17,20 +17,18 @@ export class UserComponent implements OnInit {
 
   done = false;
 
-  users: User[] = [];
+  users: User[];
   NewUser: User;
   constructor(private userService: UserService)  {  }
 
   ngOnInit() {
-    this.users = this.userService.users;
+    this.users = this.userService.Get().subscribe(data => {
+      this.users = data;
+      console.log(data);
+    });
+
   }
   AddItem() {
-
-    /*this.userService.postData(this.NewUser)
-      .subscribe(
-        (data: User) => {this.NewUser  = data; this.done = true; },
-        error => console.log(error)
-      );*/
     this.NewUser = {name:  this.username, email: this.email , company: this.company};
     this.userService.AddItem(this.NewUser);
   }

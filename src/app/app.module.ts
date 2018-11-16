@@ -12,6 +12,7 @@ import {CompanyServes} from './company/company.serves';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+
 const Routes = [
   { path: '', component: HomeComponent},
   { path: 'user', component: UserComponent},
