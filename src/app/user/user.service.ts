@@ -16,5 +16,7 @@ export class UserService {
     // this.users.push(user);
   }
 
-
+  Edit(user: User)  {
+    return this.http.post('http://localhost:3000/Users', user);
+  }
 }

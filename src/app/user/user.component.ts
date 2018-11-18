@@ -1,6 +1,8 @@
 import { Component, OnInit, Input} from '@angular/core';
 import {UserService} from './user.service';
 import {User} from '../user';
+import {MatDialog} from '@angular/material';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-user',
@@ -11,13 +13,11 @@ import {User} from '../user';
 export class UserComponent implements OnInit {
 
   @Input() user;
-  username;
-  email;
-  company;
+
 
   users: User[] = [];
-  NewUser: User;
-  constructor(private userService: UserService)  {  }
+  NewUser: User = new User();
+  constructor(private userService: UserService, private dialog: MatDialog)  {  }
 
   ngOnInit() {
     this.userService.Get().subscribe(data => {
@@ -26,8 +26,16 @@ export class UserComponent implements OnInit {
     });
 
   }
+  OnOpenModalEdit(U: User) {
+    console.log(U.Company);
+  }
+
+  OnDelete(U: User) {
+    console.log(U.Company);
+    this.users.splice(this.users.indexOf(U), 1);
+  }
+
   AddItem() {
-    this.NewUser = {Name:  this.username, Email: this.email , Company: this.company};
-    this.userService.AddItem(this.NewUser);
+    this.users.push(this.NewUser);
   }
 }
