@@ -12,6 +12,9 @@ import {CompanyServes} from './company/company.serves';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatDialogModule} from '@angular/material';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 
 const Routes = [
   { path: '', component: HomeComponent},
@@ -26,6 +29,7 @@ const Routes = [
     HomeComponent,
     UserComponent,
     CompanyComponent,
+    EditUserComponent,
 
   ],
   imports: [
@@ -34,9 +38,10 @@ const Routes = [
     RouterModule.forChild(Routes),
     FormsModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
-  entryComponents: [  ],
+  entryComponents: [ EditUserComponent ],
   providers: [UserService, CompanyServes],
   bootstrap: [AppComponent]
 })

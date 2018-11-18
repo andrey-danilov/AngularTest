@@ -2,6 +2,7 @@
 
   <form class="col s12" >
     <div class="row">
+
       <div class="input-field col l4">
         <i class="material-icons prefix">account_circle</i>
         <input [(ngModel)]="NewUser.Name" name="username"  id="icon_Name" type="text" class="validate">
@@ -13,12 +14,11 @@
         <label for="icon_Email">Email</label>
       </div>
       <div class="input-field col l3">
-
         <input [(ngModel)]="NewUser.Company" name="company" id="icon_Company" type="tel" class="validate">
         <label for="icon_Company">Company</label>
       </div>
       <div class="input-field col l1">
-        <a class="waves-effect waves-light btn" (click)="AddItem()">button</a>
+        <a class="waves-effect waves-light btn" (click)="AddItem(NewUser)">button</a>
       </div>
     </div>
   </form>
@@ -37,8 +37,8 @@
       <div class="col l3">{{ u.Name}}</div>
       <div class="col l3">{{ u.Email}}</div>
       <div class="col l4">{{ u.Company}}</div>
-      <div class="col l1 right-align"><button (click)="OnOpenModalEdit(u)" >Edit</button></div>
-      <div class="col l1 right-align"><button (click)="OnDelete(u)" >Edit</button></div>
+      <div class="col l1 input-field"><button class="waves-effect waves-light btn" mat-raised-button (click)="openDialog(u)" >Edit</button></div>
+      <div class="col l1 input-field"><button class="waves-effect waves-light btn" (click)="OnDelete(u)" >Delete</button></div>
     </div>
   </li>
 </ul>

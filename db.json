@@ -1,20 +1,53 @@
 {
   "Users": [
-    { "Name": "John", "Email": "Email-1@Gmail.com" , "Company":"Alibaba" },
-    {  "Name": "Jane", "Email": "Email-2@Gmail.com" , "Company":"Alibaba" },
-    {  "Name": "Jim", "Email": "Email-3@Gmail.com" , "Company":"Alibaba" },
-    {  "Name": "Richard", "Email": "Email-4@Gmail.com" , "Company":"Apple" },
-    {  "Name": "Picasso", "Email": "Email-5@Gmail.com" , "Company":"Apple" }
+    {
+      "Name": "U1",
+      "Email": "test",
+      "Company": "Apple",
+      "id": 1
+    }
   ],
   "Companies": [
-    {  "Name": "Alibaba", "Quota": 10 },
-    { "Name": "Apple", "Quota": 1 }
+    {
+      "Name": "Alibaba",
+      "Quota": 10
+    },
+    {
+      "Name": "Apple",
+      "Quota": 1
+    }
   ],
   "TransferLogs": [
-  	{ "User": "John", "Date": "15 Nov 2016 15:01:01", "Resource":"http://xxxx.xxx/xx.xx", "Transferred":"3 GB" },
-  	{ "User": "Picasso", "Date": "20 Nov 2016 15:01:01", "Resource":"http://xxxx.xxx/xx.xx", "Transferred":"30 GB" },
-  	{  "User": "Richard", "Date": "11 Nov 2016 15:01:01", "Resource":"http://xxxx.xxx/xx.xx", "Transferred":"25 GB" },
-  	{  "User": "Jane", "Date": "13 Nov 2016 15:01:01", "Resource":"http://xxxx.xxx/xx.xx", "Transferred":"12 GB" },
-  	{  "User": "John", "Date": "50 Nov 2017 15:01:01", "Resource":"http://xxxx.xxx/xx.xx", "Transferred":"14 GB" }
+    {
+      "id": 0,
+      "User": "John",
+      "Date": "15 Nov 2016 15:01:01",
+      "Resource": "http://xxxx.xxx/xx.xx",
+      "Transferred": "3 GB"
+    },
+    {
+      "User": "Picasso",
+      "Date": "20 Nov 2016 15:01:01",
+      "Resource": "http://xxxx.xxx/xx.xx",
+      "Transferred": "30 GB"
+    },
+    {
+      "User": "Richard",
+      "Date": "11 Nov 2016 15:01:01",
+      "Resource": "http://xxxx.xxx/xx.xx",
+      "Transferred": "25 GB"
+    },
+    {
+      "User": "Jane",
+      "Date": "13 Nov 2016 15:01:01",
+      "Resource": "http://xxxx.xxx/xx.xx",
+      "Transferred": "12 GB"
+    },
+    {
+      "User": "John",
+      "Date": "50 Nov 2017 15:01:01",
+      "Resource": "http://xxxx.xxx/xx.xx",
+      "Transferred": "14 GB"
+    }
   ]
 }

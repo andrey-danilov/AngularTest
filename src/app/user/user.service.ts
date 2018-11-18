@@ -12,11 +12,16 @@ export class UserService {
     return this.http.get<User[]>('http://localhost:3000/Users');
   }
 
-  AddItem(user:  User) {
-    // this.users.push(user);
+  AddItem(user:  User)  {
+    return this.http.post('http://localhost:3000/Users/', user).subscribe((res: Response)  => console.log(res));
   }
 
-  Edit(user: User)  {
-    return this.http.post('http://localhost:3000/Users', user);
+  Delete(user: User)  {
+    this.http.delete('http://localhost:3000/Users/' + user.id).subscribe((res: Response)  => console.log(res));
   }
+
+  Edit(user: User) {
+    this.http.put('http://localhost:3000/Users/' + user.id , user).subscribe((res: Response)  => console.log(res));
+  }
+
 }
